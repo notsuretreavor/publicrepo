@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>This is the Title</title>
+</head>
+
+<div class="container-fluid">
+    <h2>censusVis</h2>
+    <div class="row">
+        <div class="col-sm-4">
+            <form class="well">
+                <span class="help-block">Create demographic maps with
+                    information from the 2010 US Census.</span>
+                <div class="form-group shiny-input-container">
+                    <label class="control-label" for="var">Choose a variable to display</label>
+                    <div>
+                        <select id="var">
+                            <option value="Percent White" selected>Percent White</option>
+                            <option value="Percent Black">Percent Black</option>
+                            <option value="Percent Hispanic">Percent Hispanic</option>
+                            <option value="Percent Asian">Percent Asian</option>
+                        </select>
+                        <script type="application/json" data-for="var" data-nonempty="">{}</script>
+                    </div>
+                </div>
+                <div class="form-group shiny-input-container">
+                    <label class="control-label" for="range">Range of interest:</label>
+                    <input class="js-range-slider" id="range" data-type="double" data-min="0" data-max="100" data-from="0"
+                        data-to="100" data-step="1" data-grid="true" data-grid-num="10" data-grid-snap="false"
+                        data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true"
+                        data-drag-interval="true" data-data-type="number" />
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-8">
+            <div id="selected_var" class="shiny-text-output"></div>
+        </div>
+    </div>
+</div>
+
+</html>
